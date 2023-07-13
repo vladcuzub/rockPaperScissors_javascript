@@ -1,0 +1,134 @@
+@font-face {
+  font-family: inter;
+  src: url(../Font/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@font-face {
+  font-family: New_York;
+  src: url(../Font/New_York/New_york.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+img:hover {
+  transition: all .6s ease-out;
+  box-shadow: 0 0 10px rgb(254, 254, 254);
+}
+
+.App {
+  margin: 5rem auto;
+  width: 400px;
+  height: 720px;
+  border: 18px solid black;
+  border-radius: 40px;
+  background-color: white;
+  position: relative;
+  box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.493);
+  z-index: 1;
+  background: linear-gradient(336deg, rgb(0, 91, 151) 0%, rgba(4, 122, 120, 0.722) 52%);
+}
+
+.wrapp {
+  height: 690px;
+  padding: 1.5rem;
+  border-radius: 40px;
+  z-index: -1;
+}
+
+.notch {
+  width: 150px;
+  height: 20px;
+  border-radius: 0 0 20px 20px;
+  background-color: black;
+  position: absolute;
+  top: 0rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn_phone1 {
+  width: 10px;
+  height: 40px;
+  border-radius: 20px 20px 20px 20px;
+  background-color: black;
+  position: absolute;
+  left: -23px;
+  top: 9rem;
+}
+
+.btn_phone2 {
+  width: 10px;
+  height: 40px;
+  border-radius: 20px 20px 20px 20px;
+  background-color: black;
+  position: absolute;
+  left: -23px;
+  top: 5rem;
+}
+
+.btn_phone3 {
+  width: 10px;
+  height: 60px;
+  border-radius: 20px 20px 20px 20px;
+  background-color: black;
+  position: absolute;
+  left: 23.6rem;
+  top: 6rem;
+}
+
+h1 {
+  font-family: New_York;
+  font-size: 2rem;
+  text-align: center;
+  padding: 20px;
+}
+
+h3 {
+  margin-top: 3rem;
+  text-align: center;
+  font-family: inter;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+form label {
+
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.score {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  font-family: inter;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.user_name, .comp_name {
+  font-weight: 700;
+}
+.game_status {
+  font-family: New_York;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.items_game .text{
+ text-align: center;
+ margin-top: 3rem;
+}
