@@ -75,7 +75,7 @@
 //     userChoiceShow.textContent = uScoreNr;
 //     return gameStatus.textContent = "Scissor 'user' beats...Paper 'comp'"
 //   }
-// }
+// }gh
 // // Check bottons
 // checkboxes.forEach(checkbox => {
 //   checkbox.addEventListener('click', () => {
