@@ -16,16 +16,32 @@
 
 body {
   height: 100vh;
+  background-image: linear-gradient(to top, rgba(235, 235, 235, 0), rgba(0, 0, 0, 0.441)), url('../images/pexels-pixabay-269063.jpg');
+  background-size: cover;
+
 }
 
-img {
+.items_game img {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+  transition: .2s linear;
+  background-color: transparent;
+  filter: grayscale(100%);
+  filter: blur(.8px);
+}
+
+.items_game img:nth-of-type(2) {
+  margin: 0 1rem;
+}
+
+img:hover {
   width: 100px;
   height: 100px;
-  cursor: pointer;
-}
-img:hover {
-  transition: all .6s ease-out;
-  box-shadow: 0 0 10px rgb(254, 254, 254);
+  filter: grayscale(0);
+  filter: blur(0);
 }
 
 .App {
@@ -36,9 +52,15 @@ img:hover {
   border-radius: 40px;
   background-color: white;
   position: relative;
-  box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.493);
+  box-shadow: 20px 25px 20px rgba(0, 0, 0, 0.758);
   z-index: 1;
-  background: linear-gradient(336deg, rgb(0, 91, 151) 0%, rgba(4, 122, 120, 0.722) 52%);
+  transition: transform 0.3s ease;
+  transform: perspective(900px) rotateX(15deg);
+  background: linear-gradient(336deg, #008ba3 10%, #001a78 92%);
+}
+
+.App:hover {
+  transform: perspective(1300px) rotateX(-10deg);
 }
 
 .wrapp {
@@ -91,23 +113,21 @@ img:hover {
 
 h1 {
   font-family: New_York;
-  font-size: 2rem;
+  font-size: 2.8rem;
   text-align: center;
   padding: 20px;
+  text-shadow: 3px 5px 15px rgba(0, 0, 0, 0.346);
 }
 
 h3 {
   margin-top: 3rem;
   text-align: center;
   font-family: inter;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-form label {
-
-  padding: 1rem;
+  font-weight: 400;
   font-size: 1.5rem;
+  margin-bottom: 1rem;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.531);
+    color: white;
 }
 
 .score {
@@ -119,16 +139,171 @@ form label {
   text-align: center;
   margin-bottom: 1rem;
 }
-.user_name, .comp_name {
+
+.user_name,
+.comp_name {
   font-weight: 700;
+  border: 1.2px solid white;
+  padding: 5px;
+  border-radius: 5px;
 }
+
 .game_status {
-  font-family: New_York;
+  font-family: inter;
   font-size: 1.2rem;
   text-align: center;
-  margin-bottom: 2rem;
+
 }
-.items_game .text{
- text-align: center;
- margin-top: 3rem;
+
+.items_game {
+  text-align: center;
+  margin-top: 3rem;
+}
+/* Hide the checkboxes */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Style the labels */
+label {
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 60px;
+    height: 50px;
+    text-align: center;
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 0 10px 0 5px;
+      transition: 1s ease-in-out;
+        font-family: New_York;
+        font-size: 1.2rem;
+}
+
+/* Style the labels when checkboxes are checked */
+input[type="checkbox"]:checked+label {
+  background-color: #EFBF6A;
+  border: 1px solid rgb(99, 99, 99);
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.328);
+}
+
+.money-box {
+  position: relative;
+display: none;
+}
+.money-box_show{
+  display: block;
+    position: relative;
+}
+
+.money {
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  animation: moneyAnimation 1s linear infinite;
+}
+
+.money:nth-of-type(1) {
+  left: 2rem;
+  animation: moneyAnimation 2s linear infinite;
+}
+
+.money:nth-of-type(2) {
+  left: 4rem;
+  animation: moneyAnimation 2.3s linear infinite;
+  width: 190px;
+  height: 95px;
+}
+
+.money:nth-of-type(3) {
+  left: 6rem;
+  animation: moneyAnimation 3.6s linear infinite;
+  width: 180px;
+  height: 90px;
+}
+
+.money:nth-of-type(4) {
+  left: 7rem;
+  animation: moneyAnimation 4s linear infinite;
+}
+
+.money:nth-of-type(5) {
+  left: 12rem;
+  animation: moneyAnimation 2s linear infinite;
+}
+
+.money:nth-of-type(6) {
+  left: 15rem;
+  animation: moneyAnimation 3s linear infinite;
+}
+
+.money:nth-of-type(7) {
+  left: 13.4rem;
+  animation: moneyAnimation 1.8s linear infinite;
+}
+
+.money:nth-of-type(8) {
+  right: 2rem;
+  animation: moneyAnimation 2s linear infinite;
+}
+
+.money:nth-of-type(9) {
+  right: 4rem;
+  animation: moneyAnimation 2.3s linear infinite;
+}
+
+.money:nth-of-type(10) {
+  right: 6rem;
+  animation: moneyAnimation 3.6s linear infinite;
+}
+
+.money:nth-of-type(11) {
+  right: 7rem;
+  animation: moneyAnimation 4s linear infinite;
+}
+
+.money:nth-of-type(12) {
+  right: 12rem;
+  animation: moneyAnimation 2s linear infinite;
+}
+
+.money:nth-of-type(6) {
+  left: 15rem;
+  animation: moneyAnimation 3s linear infinite;
+}
+
+.money:nth-of-type(7) {
+  left: 13.4rem;
+  animation: moneyAnimation 1.8s linear infinite;
+}
+
+@keyframes moneyAnimation {
+  0% {
+    top: -100px;
+    transform: rotateX(0deg) rotateZ(0deg) translateX(0px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotateX(360deg) rotateZ(180deg) translateX(-50px);
+  }
+
+  100% {
+    top: 100vh;
+    opacity: 0;
+    transform: rotateY(720deg) rotateZ(720deg) translateX(50px);
+  }
+}
+button {
+  margin: 0 auto;
+  padding: .6rem;
+  border-radius: 8px;
+  background-color:#051A79;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.text {
+  color: white;
 }
